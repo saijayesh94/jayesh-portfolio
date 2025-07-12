@@ -114,7 +114,7 @@
             animation: fadeInUp 1s ease-out 1.1s forwards;
         }
 
-       .hero-buttons {
+        .hero-buttons {
             display: flex;
             gap: 1rem;
             opacity: 0;
@@ -133,8 +133,6 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1.4s forwards;
         }
 
         .cta-button:hover {
@@ -142,7 +140,7 @@
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
         }
 
-       .resume-button {
+        .resume-button {
             background: transparent;
             color: #00ff88;
             padding: 1rem 2rem;
@@ -500,42 +498,48 @@
             box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
         }
 
-        .contact-cta {
-            background: rgba(0, 255, 136, 0.1);
-            border: 2px solid rgba(0, 255, 136, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-top: 2rem;
+        .tooltip-container {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            z-index: 999;
         }
 
-        .contact-cta h3 {
-            color: #00ff88;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-cta p {
-            color: #cccccc;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-cta .cta-button {
-            background: linear-gradient(45deg, #00ff88, #00cc70);
+        #backToTop {
+            background-color: #00ff88;
             color: #000;
-            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            padding: 0.8rem 1.2rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+            margin-top: 2px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .contact-cta .cta-button:hover {
+        #backToTop:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+        }
+
+        .tooltip-text {
+            margin-top: 0.5rem;
+            background-color: #222;
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            opacity: 1;
         }
 
         /* Animations */
@@ -569,11 +573,11 @@
                 font-size: 2.5rem;
             }
 
-              .hero-buttons {
+            .hero-buttons {
                 flex-direction: column;
                 align-items: flex-start;
             }
-               
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -586,46 +590,3 @@
                 grid-template-columns: 1fr;
             }
         }
-      .tooltip-container {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    display: none; /* will be shown via JS */
-    flex-direction: column;
-    align-items: center;
-    z-index: 999;
-}
-
-#backToTop {
-    background-color: #00ff88;
-    color: #000;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
-    margin-top: 2px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#backToTop:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
-}
-
-.tooltip-text {
-    margin-top: 0.5rem;
-    background-color: #222;
-    color: #fff;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.tooltip-container:hover .tooltip-text {
-    opacity: 1;
-}
