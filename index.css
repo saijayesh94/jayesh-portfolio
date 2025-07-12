@@ -135,6 +135,27 @@
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
         }
 
+       .resume-button {
+            background: transparent;
+            color: #00ff88;
+            padding: 1rem 2rem;
+            border: 2px solid #00ff88;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .resume-button:hover {
+            background: #00ff88;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
         /* Floating elements */
         .floating-elements {
             position: absolute;
